@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    //Wait for the DOM to be ready
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Remove the div after it's in the DOM
+        document.getElementById('myDiv').remove();
+    });
+  </script>
+</body>
+</html>
