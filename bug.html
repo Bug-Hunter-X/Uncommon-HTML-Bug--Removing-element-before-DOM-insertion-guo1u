@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    // Incorrectly attempting to remove the div before it's in the DOM
+    document.getElementById('myDiv').remove();
+
+    //This will cause an error before the div is added
+    setTimeout(function(){
+        document.getElementById('myDiv').style.display = "none";
+    }, 1000);
+  </script>
+</body>
+</html>
